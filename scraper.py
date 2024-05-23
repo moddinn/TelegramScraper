@@ -72,7 +72,8 @@ for chat in chats:
     except:
         continue
 
-print(gr+'[+] Choose a group to scrape members:'+re)
+
+
 for i, g in enumerate(groups):
     print(gr+'['+cy+str(i)+']' + ' - ' + g.title)
 print('')
@@ -96,3 +97,4 @@ with open("members.csv","w",encoding='UTF-8') as f:
         name= (first_name + ' ' + last_name).strip()
         writer.writerow([username,user.id,user.access_hash,name,target_group.title, target_group.id])
 print(gr+'[+] Members scraped successfully!')
+
